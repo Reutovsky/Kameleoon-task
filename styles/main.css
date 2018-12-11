@@ -1,3 +1,123 @@
-#app {
-  background: red;
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Helvetica, Arial, Tahoma, serif;
+}
+
+body {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-wrapper-grid {
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: 200px 50px 500px 150px 200px;
+  grid-template-areas: "hd hd hd"
+                       "nv nv pv"
+                       "sb mc pv"
+                       "pb pb pb"
+                       "ft ft ft";
+  grid-gap: 5px;
+}
+
+.header {
+  grid-area: hd;
+}
+
+.nav-bar {
+  grid-area: nv;
+}
+
+.sidebar {
+  grid-area: sb;
+}
+
+.main-content {
+  grid-area: mc;
+}
+
+.people-who-viewed {
+  grid-area: pv;
+}
+
+.people-also-bought {
+  grid-area: pb;
+}
+
+.footer {
+  grid-area: ft;
+}
+
+.header,
+.nav-bar,
+.sidebar,
+.main-content,
+.people-who-viewed,
+.people-also-bought,
+.footer {
+  border: black 1px solid;
+}
+
+.header,
+.nav-bar,
+.sidebar,
+.main-content,
+.footer {
+  padding: 5px;
+}
+
+.people-who-viewed__header {
+  height: 50px;
+}
+.people-who-viewed__header,
+.people-also-bought__header {
+  font-size: 14px;
+  background: #eee;
+  border-bottom: black 1px solid;
+  padding: 5px;
+
+}
+
+.product__image-image {
+  width: 50px;
+  height: 50px;
+}
+
+.product__wrapper-column-product,
+.product__wrapper-row-product {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.people-also-bought__content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+#button {
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
 }
